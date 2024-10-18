@@ -1,0 +1,17 @@
+/* Custom styles for the course catalog (optional) */
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease-in-out;
+}
+
+.offcanvas-header h5 {
+    font-weight: bold;
+}

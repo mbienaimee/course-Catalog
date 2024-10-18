@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Course Catalog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Course Catalog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Menu for Filtering -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Filter Courses</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h6>Category</h6>
+            <select class="form-select" id="categoryFilter">
+                <option value="">All</option>
+                <option value="web-development">Web Development</option>
+                <option value="data-science">Data Science</option>
+                <option value="design">Design</option>
+            </select>
+
+            <h6 class="mt-3">Level</h6>
+            <select class="form-select" id="levelFilter">
+                <option value="">All</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="container mt-4">
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <input type="text" class="form-control" id="searchBar" placeholder="Search courses...">
+            </div>
+        </div>
+
+        <!-- Course Catalog -->
+        <div class="row" id="courseContainer">
+            <!-- Courses will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS & Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
